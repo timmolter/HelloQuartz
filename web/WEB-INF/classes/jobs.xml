@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_2_0.xsd"
+  version="2.0">
+
+    <schedule>
+        <job>
+            <name>my-job</name>
+            <group>MYJOB_GROUP</group>
+            <description>The job description</description>
+            <job-class>com.xeiam.helloquartz.MyJobClass</job-class>
+        </job>
+
+        <trigger>
+            <cron>
+                <name>my-trigger</name>
+                <group>MYTRIGGER_GROUP</group>
+                <job-name>my-job</job-name>
+                <job-group>MYJOB_GROUP</job-group>
+                <cron-expression>0/5 * * * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </schedule>
+</job-scheduling-data>
