@@ -8,7 +8,7 @@ HelloQuartz demonstrates how to integrate the Quartz scheduler into a Java Web A
 Features
 -----
 
-* job.xml file defining a single job and cron trigger
+* jobs.xml file defining a single job and cron trigger
 * quartz.properties file
 * RAMJobStore
 * web.xml file that initializes Quartz
